@@ -121,7 +121,47 @@
 // [0, 0, 0],
 // [0, 0, 0]]
 
+// let pushHere = [];
+
+// let nest1 = [[0, 0, 0]];
+// let nest2 = [[0, 0, 0]];
+// let nest3 = [[0, 0, 0]];
+// for (let i = 0; i < nest1.length; i++) {
+//   pushHere.push(nest1[i]);
+//   for (let i = 0; i < nest2.length; i++) {
+//     pushHere.push(nest2[i]);
+//     for (let i = 0; i < nest3.length; i++) {
+//       pushHere.push(nest3[i]);
+//     }
+//   }
+// }
+// console.log(pushHere);
 // 2.Create an array that mimics a grid like the following using nested for loops:
+let pushHere = [];
+
+let nest1 = [[0, 0, 0]];
+let nest2 = [[1, 1, 1]];
+let nest3 = [[2, 2, 2]];
+for (let i = 0; i < nest1.length; i++) {
+  // pushHere.push(nest1[i]);
+  if (i === 0) {
+    pushHere.push(nest1[i]);
+  }
+  for (let i = 0; i < nest2.length; i++) {
+    // pushHere.push(nest2[i]);
+    if (i === 1) {
+      pushHere.push(nest2[i]);
+    }
+    for (let i = 0; i < nest3.length; i++) {
+      // pushHere.push(nest3[i]);
+      if (i === 2) {
+        pushHere.push(nest3[i]);
+      }
+    }
+  }
+}
+console.log(pushHere);
+
 // [[0, 0, 0],
 // [1, 1, 1],
 // [2, 2, 2]]
